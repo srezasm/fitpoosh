@@ -5,17 +5,17 @@
 import React from "react";
 import { classNames } from "@plasmicapp/react-web";
 
-export type UserSvgIconProps = React.ComponentProps<"svg"> & {
+export type ChecksvgIconProps = React.ComponentProps<"svg"> & {
   title?: string;
 };
 
-export function UserSvgIcon(props: UserSvgIconProps) {
+export function ChecksvgIcon(props: ChecksvgIconProps) {
   const { className, style, title, ...restProps } = props;
   return (
     <svg
       xmlns={"http://www.w3.org/2000/svg"}
       fill={"none"}
-      viewBox={"0 0 25 25"}
+      viewBox={"0 0 24 24"}
       height={"1em"}
       width={"1em"}
       style={{
@@ -29,8 +29,10 @@ export function UserSvgIcon(props: UserSvgIconProps) {
       {title && <title>{title}</title>}
 
       <path
+        fillRule={"evenodd"}
+        clipRule={"evenodd"}
         d={
-          "M12.11 0C5.42 0 0 5.42 0 12.11c0 6.689 5.42 12.109 12.11 12.109 6.689 0 12.109-5.42 12.109-12.11C24.219 5.42 18.799 0 12.109 0zm0 4.688a4.297 4.297 0 110 8.593 4.297 4.297 0 010-8.594zm0 16.796a9.357 9.357 0 01-7.154-3.33c.918-1.728 2.715-2.92 4.81-2.92.117 0 .234.02.346.054a6.464 6.464 0 001.997.337 6.44 6.44 0 001.997-.337c.113-.034.23-.054.347-.054 2.095 0 3.892 1.192 4.81 2.92a9.357 9.357 0 01-7.154 3.33z"
+          "M18.416 5.876a.75.75 0 01.208 1.04L11.42 17.721a1.75 1.75 0 01-2.871.06l-3.156-4.34a.75.75 0 111.214-.882l3.155 4.339a.25.25 0 00.41-.009l7.204-10.805a.75.75 0 011.04-.208z"
         }
         fill={"currentColor"}
       ></path>
@@ -38,5 +40,5 @@ export function UserSvgIcon(props: UserSvgIconProps) {
   );
 }
 
-export default UserSvgIcon;
+export default ChecksvgIcon;
 /* prettier-ignore-end */

@@ -5,11 +5,11 @@
 import React from "react";
 import { classNames } from "@plasmicapp/react-web";
 
-export type SearchSvgIconProps = React.ComponentProps<"svg"> & {
+export type SearchsvgIconProps = React.ComponentProps<"svg"> & {
   title?: string;
 };
 
-export function SearchSvgIcon(props: SearchSvgIconProps) {
+export function SearchsvgIcon(props: SearchsvgIconProps) {
   const { className, style, title, ...restProps } = props;
   return (
     <svg
@@ -38,5 +38,5 @@ export function SearchSvgIcon(props: SearchSvgIconProps) {
   );
 }
 
-export default SearchSvgIcon;
+export default SearchsvgIcon;
 /* prettier-ignore-end */

@@ -70,12 +70,12 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: gEDnAkutJxpj72EWzRAHSD/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: 1BOjDDqTx3n0/css
 
-import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: syr8Iyb9Vv7f/icon
-import SearchSvg2Icon from "./icons/PlasmicIcon__SearchSvg2"; // plasmic-import: c4av0FQK4p3h/icon
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: syr8Iyb9Vv7f/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: 26U81VLiynhs/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: d6lRgkADHPon/icon
 import Icon28Icon from "./icons/PlasmicIcon__Icon28"; // plasmic-import: UDVt1_teZ5L8/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: 34EZUZ-LpeBk/icon
+import Searchsvg2Icon from "./icons/PlasmicIcon__Searchsvg2"; // plasmic-import: c4av0FQK4p3h/icon
 
 createPlasmicElementProxy;
 
@@ -90,10 +90,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  nav?: Flex__<"nav">;
   header?: Flex__<typeof Header>;
   h1?: Flex__<"h1">;
-  textInput?: Flex__<typeof TextInput>;
-  textInput2?: Flex__<typeof TextInput>;
   textInput3?: Flex__<typeof TextInput>;
 };
 
@@ -130,18 +129,6 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
-      {
-        path: "textInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
-      },
-      {
-        path: "textInput2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
-      },
       {
         path: "textInput3.value",
         type: "private",
@@ -189,18 +176,11 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <nav className={classNames(projectcss.all, sty.nav__qZi0T)}>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___2XnZy
-              )}
-            >
-              {"Announcebar lorem text here"}
-            </div>
-          </nav>
-          <nav className={classNames(projectcss.all, sty.nav__rygEm)}>
+          <nav
+            data-plasmic-name={"nav"}
+            data-plasmic-override={overrides.nav}
+            className={classNames(projectcss.all, sty.nav)}
+          >
             <Header
               data-plasmic-name={"header"}
               data-plasmic-override={overrides.header}
@@ -226,7 +206,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h1
                       )}
                     >
-                      {"Returns & exchanges"}
+                      {"\u0641\u06cc\u062a \u067e\u0648\u0634"}
                     </h1>
                     <div
                       className={classNames(
@@ -237,8 +217,52 @@ function PlasmicHomepage__RenderFunc(props: {
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
-                        : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."}
+                        : "\u067e\u0644\u062a\u0641\u0631\u0645 \u062c\u0627\u0645\u0639 \u062e\u0631\u06cc\u062f \u0648 \u0627\u0646\u062f\u0627\u0632\u0647\u200c\u06af\u06cc\u0631\u06cc \u0622\u0646\u0644\u0627\u06cc\u0646 \u067e\u0648\u0634\u0627\u06a9\u060c \u0628\u0627 \u06a9\u0645\u06a9 \u0647\u0648\u0634 \u0645\u0635\u0646\u0648\u0639\u06cc."}
                     </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__c0Ox0)}
+                    >
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__kPfDg
+                        )}
+                        color={"softSand"}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__bo1Kk
+                          )}
+                        >
+                          {
+                            "\u0641\u0631\u0648\u0634\u0646\u062f\u0647\u200c\u0627\u0645"
+                          }
+                        </div>
+                      </Button>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__ap2Q
+                        )}
+                        color={"green"}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__fWPeb
+                          )}
+                        >
+                          {
+                            "\u0645\u0634\u062a\u0631\u06cc \u0647\u0633\u062a\u0645"
+                          }
+                        </div>
+                      </Button>
+                    </Stack__>
                   </Stack__>
                 </div>
               </div>
@@ -258,7 +282,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h2__jVjz
                 )}
               >
-                {"Satisfaction guarantee"}
+                {
+                  "\u062e\u0631\u06cc\u062f \u0622\u0646\u0644\u0627\u06cc\u0646 \u0644\u0628\u0627\u0633"
+                }
               </h2>
               <div
                 className={classNames(
@@ -268,7 +294,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 )}
               >
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
+                  "\u062f\u06cc\u06af\u0647 \u0628\u0647 \u062e\u06cc\u0627\u0637 \u0648 \u0627\u0646\u062f\u0627\u0632\u0647\u200c\u06af\u06cc\u0631\u06cc \u062f\u0633\u062a\u06cc \u0646\u06cc\u0627\u0632\u06cc \u0646\u06cc\u0633\u062a!\n\u0628\u0627 \u06cc\u06a9 \u0639\u06a9\u0633 \u0645\u06cc\u200c\u062a\u0648\u0646\u06cc \u0627\u0646\u062f\u0627\u0632\u0647 \u0644\u0628\u0627\u0633 \u0645\u062f\u0646\u0638\u0631\u062a \u0631\u0648 \u0628\u0627 \u0644\u0628\u0627\u0633 \u062a\u0646\u062a \u0645\u0642\u0627\u06cc\u0633\u0647 \u06a9\u0646\u06cc!"
                 }
               </div>
             </Stack__>
@@ -296,9 +322,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/fit_poosh/images/alexanderMilsLCPhGxs7PwwUnsplashJpg.jpg",
-                      fullWidth: 1920,
-                      fullHeight: 1280,
+                      src: "/plasmic/fit_poosh/images/fp2Jpg.jpg",
+                      fullWidth: 1905,
+                      fullHeight: 1429,
                       aspectRatio: undefined
                     }}
                   />
@@ -317,7 +343,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h2__z6K5K
                       )}
                     >
-                      {"Return policy"}
+                      {
+                        "\u06a9\u0627\u0631\u06a9\u0631\u062f\u0634 \u0686\u0637\u0648\u0631\u06cc\u0647\u061f"
+                      }
                     </h2>
                     <div
                       className={classNames(
@@ -327,29 +355,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
-                      }
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__hySst
-                      )}
-                    >
-                      {
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
-                      }
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__qls72
-                      )}
-                    >
-                      {
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
+                        "\u0628\u0647 \u0633\u0627\u062f\u06af\u06cc \u06cc\u06a9 \u0639\u06a9\u0633. \u06a9\u0627\u0641\u06cc\u0647 \u0644\u0628\u0627\u0633\u06cc \u06a9\u0647 \u0627\u0646\u062f\u0627\u0632\u0647\u200c\u0627\u062a \u0647\u0633\u062a \u0631\u0648 \u0631\u0648\u06cc \u0632\u0645\u06cc\u0646 \u067e\u0647\u0646 \u06a9\u0646\u06cc \u0648 \u06a9\u0646\u0627\u0631\u0634 \u06a9\u0627\u0631\u062a \u0628\u0627\u0646\u06a9\u06cc\u062a \u0631\u0648 \u0628\u0632\u0627\u0631\u06cc\u060c \u062d\u0627\u0644\u0627 \u06cc\u06a9 \u0639\u06a9\u0633 \u0627\u0632\u0634 \u0628\u06af\u06cc\u0631 \u0648 \u0628\u0631\u0627\u0645\u0648\u0646 \u0628\u0641\u0631\u0633\u062a \u062a\u0627 \u0628\u0627 \u0633\u0627\u06cc\u0632 \u0644\u0628\u0627\u0633 \u0645\u062f\u0646\u0638\u0631\u062a \u0627\u0646\u0637\u0628\u0627\u0642\u0634 \u0628\u062f\u06cc\u0645 \u0648 \u0628\u0647\u062a \u0628\u06af\u06cc\u0645 \u0627\u0646\u062f\u0627\u0632\u062a \u0647\u0633\u062a \u06cc\u0627 \u0646\u0647."
                       }
                     </div>
                   </Stack__>
@@ -374,7 +380,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/fit_poosh/images/martenBjork6DW3XyQvcYeUnsplashJpg.jpg",
+                  src: "/plasmic/fit_poosh/images/martenBjork6DW3XyQvcYeUnsplashjpg.jpg",
                   fullWidth: 4096,
                   fullHeight: 2730,
                   aspectRatio: undefined
@@ -394,7 +400,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.h2___6FOvj
                   )}
                 >
-                  {"Sustainable refurbishing"}
+                  {
+                    "\u0641\u0631\u0648\u0634\u0646\u062f\u0647\u200c\u0627\u06cc\u061f"
+                  }
                 </h2>
                 <div
                   className={classNames(
@@ -404,18 +412,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
-                  }
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__huvj
-                  )}
-                >
-                  {
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
+                    "\u06a9\u0627\u0641\u06cc\u0647 \u06cc\u06a9\u0628\u0627\u0631 \u0633\u0627\u06cc\u0632 \u0644\u0628\u0627\u0633\u200c\u0647\u0627\u062a\u0648 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc \u0648 \u0627\u0632 \u0627\u0648\u0646 \u0628\u0647 \u0628\u0639\u062f \u0628\u0627 \u062e\u06cc\u0627\u0644 \u0631\u0627\u062d\u062a \u0644\u0628\u0627\u0633\u200c\u0647\u0627\u062a\u0648 \u0628\u0641\u0631\u0648\u0634\u06cc.\n\u0645\u0627 \u0627\u0648\u0645\u062f\u06cc\u0645 \u062a\u0627 \u0645\u0639\u0636\u0644 \u0645\u0631\u062c\u0648\u0639\u06cc \u06a9\u0627\u0644\u0627 \u0648 \u0646\u0627\u0631\u0636\u0627\u06cc\u062a\u06cc \u0645\u0634\u062a\u0631\u06cc \u0628\u062e\u0627\u0637\u0631 \u0627\u0646\u062f\u0627\u0632\u0647 \u0646\u0628\u0648\u062f\u0646 \u0644\u0628\u0627\u0633 \u0631\u0648 \u06cc\u06a9\u0628\u0627\u0631 \u0628\u0631\u0627\u06cc \u0647\u0645\u06cc\u0634\u0647 \u062d\u0644 \u06a9\u0646\u06cc\u0645."
                   }
                 </div>
                 <Button
@@ -431,7 +428,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__jr8HD
                     )}
                   >
-                    {"Learn about sustainability"}
+                    {
+                      "\u0641\u0631\u0648\u0634\u0646\u062f\u0647\u200c\u0627\u0645"
+                    }
                   </div>
                 </Button>
               </Stack__>
@@ -453,7 +452,7 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {hasVariant(globalVariants, "screen", "mobileOnly")
                   ? "Get In Touch"
-                  : "Still have questions?"}
+                  : "\u0633\u0648\u0627\u0644\u06cc \u062f\u0627\u0631\u06cc\u061f"}
               </h2>
               <div
                 className={classNames(
@@ -462,64 +461,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.text__eixvz
                 )}
               >
-                {"Fill in your order info and someone will be in touch."}
+                {
+                  "\u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u0632\u06cc\u0631 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631"
+                }
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__uyRMd)}>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__fzTc)}
-                >
-                  <TextInput
-                    data-plasmic-name={"textInput"}
-                    data-plasmic-override={overrides.textInput}
-                    className={classNames("__wab_instance", sty.textInput)}
-                    onChange={(...eventArgs) => {
-                      generateStateOnChangeProp($state, ["textInput", "value"])(
-                        (e => e.target?.value).apply(null, eventArgs)
-                      );
-                    }}
-                    placeholder={"Enter your Email  here"}
-                    value={
-                      generateStateValueProp($state, ["textInput", "value"]) ??
-                      ""
-                    }
-                  />
-
-                  <TextInput
-                    data-plasmic-name={"textInput2"}
-                    data-plasmic-override={overrides.textInput2}
-                    className={classNames("__wab_instance", sty.textInput2)}
-                    onChange={(...eventArgs) => {
-                      generateStateOnChangeProp($state, [
-                        "textInput2",
-                        "value"
-                      ])((e => e.target?.value).apply(null, eventArgs));
-                    }}
-                    placeholder={"Order"}
-                    value={
-                      generateStateValueProp($state, ["textInput2", "value"]) ??
-                      ""
-                    }
-                  />
-
-                  <Button
-                    className={classNames("__wab_instance", sty.button__jEj9)}
-                    color={"sand"}
-                    size={"compact"}
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vUbz8
-                      )}
-                    >
-                      {"Submit"}
-                    </div>
-                  </Button>
-                </Stack__>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__uvNWi
+                )}
+              >
+                {
+                  "\u06f0\u06f9\u06f1\u06f3\u06f6\u06f0\u06f8\u06f1\u06f1\u06f0\u06f6"
+                }
               </div>
             </Stack__>
           </section>
@@ -538,24 +493,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__fl9HW)}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__peCv2)}
-                  displayHeight={"61px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/fit_poosh/images/swissCheese575542640Png.png",
-                    fullWidth: 640,
-                    fullHeight: 532,
-                    aspectRatio: undefined
-                  }}
-                />
-
                 <Stack__
                   as={"div"}
                   hasGap={true}
@@ -1026,11 +963,10 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "h1", "textInput", "textInput2", "textInput3"],
+  root: ["root", "nav", "header", "h1", "textInput3"],
+  nav: ["nav", "header"],
   header: ["header"],
   h1: ["h1"],
-  textInput: ["textInput"],
-  textInput2: ["textInput2"],
   textInput3: ["textInput3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1038,10 +974,9 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  nav: "nav";
   header: typeof Header;
   h1: "h1";
-  textInput: typeof TextInput;
-  textInput2: typeof TextInput;
   textInput3: typeof TextInput;
 };
 
@@ -1105,10 +1040,9 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    nav: makeNodeComponent("nav"),
     header: makeNodeComponent("header"),
     h1: makeNodeComponent("h1"),
-    textInput: makeNodeComponent("textInput"),
-    textInput2: makeNodeComponent("textInput2"),
     textInput3: makeNodeComponent("textInput3"),
 
     // Metadata about props expected for PlasmicHomepage

@@ -66,7 +66,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: gEDnAkutJxpj72EWzRAHSD/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: 6MnfNJVvTAWL/css
 
-import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: syr8Iyb9Vv7f/icon
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: syr8Iyb9Vv7f/icon
 
 createPlasmicElementProxy;
 
@@ -351,7 +351,7 @@ function PlasmicButton__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: (
-              <CheckSvgIcon
+              <ChecksvgIcon
                 className={classNames(projectcss.all, sty.svg__jBjpy)}
                 role={"img"}
               />
@@ -555,7 +555,7 @@ function PlasmicButton__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: (
-              <CheckSvgIcon
+              <ChecksvgIcon
                 className={classNames(projectcss.all, sty.svg__sygZp)}
                 role={"img"}
               />

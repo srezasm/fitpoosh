@@ -67,9 +67,9 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: gEDnAkutJxpj72
 import sty from "./PlasmicHeader.module.css"; // plasmic-import: K1YTnPhaTLTK/css
 
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: 34EZUZ-LpeBk/icon
-import SearchSvgIcon from "./icons/PlasmicIcon__SearchSvg"; // plasmic-import: IHM8-Xo0VmZ0/icon
-import UserSvgIcon from "./icons/PlasmicIcon__UserSvg"; // plasmic-import: vit4xWfP5Wem/icon
-import CartSvgIcon from "./icons/PlasmicIcon__CartSvg"; // plasmic-import: rGFylZh7BJNP/icon
+import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: IHM8-Xo0VmZ0/icon
+import UsersvgIcon from "./icons/PlasmicIcon__Usersvg"; // plasmic-import: vit4xWfP5Wem/icon
+import CartsvgIcon from "./icons/PlasmicIcon__Cartsvg"; // plasmic-import: rGFylZh7BJNP/icon
 
 createPlasmicElementProxy;
 
@@ -242,9 +242,9 @@ function PlasmicHeader__RenderFunc(props: {
               displayMinWidth={"0"}
               displayWidth={"89px"}
               src={{
-                src: "/plasmic/fit_poosh/images/swissCheese575542640Png.png",
-                fullWidth: 640,
-                fullHeight: 532,
+                src: "/plasmic/fit_poosh/images/image20240828103318Png.png",
+                fullWidth: 1920,
+                fullHeight: 952,
                 aspectRatio: undefined
               }}
             />
@@ -262,7 +262,7 @@ function PlasmicHeader__RenderFunc(props: {
               href={"#"}
               platform={"nextjs"}
             >
-              <SearchSvgIcon
+              <SearchsvgIcon
                 className={classNames(projectcss.all, sty.svg__tDi5F)}
                 role={"img"}
               />
@@ -277,7 +277,7 @@ function PlasmicHeader__RenderFunc(props: {
               href={"#"}
               platform={"nextjs"}
             >
-              <UserSvgIcon
+              <UsersvgIcon
                 className={classNames(projectcss.all, sty.svg__pp2T)}
                 role={"img"}
               />
@@ -292,7 +292,7 @@ function PlasmicHeader__RenderFunc(props: {
               href={"#"}
               platform={"nextjs"}
             >
-              <CartSvgIcon
+              <CartsvgIcon
                 className={classNames(projectcss.all, sty.svg__ljEij)}
                 role={"img"}
               />

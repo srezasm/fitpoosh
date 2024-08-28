@@ -66,8 +66,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: gEDnAkutJxpj72EWzRAHSD/projectcss
 import sty from "./PlasmicTextInput.module.css"; // plasmic-import: idu9Mj8HNthX/css
 
-import SearchSvg2Icon from "./icons/PlasmicIcon__SearchSvg2"; // plasmic-import: c4av0FQK4p3h/icon
-import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: syr8Iyb9Vv7f/icon
+import Searchsvg2Icon from "./icons/PlasmicIcon__Searchsvg2"; // plasmic-import: c4av0FQK4p3h/icon
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: syr8Iyb9Vv7f/icon
 
 createPlasmicElementProxy;
 
@@ -96,8 +96,8 @@ export type PlasmicTextInput__ArgsType = {
   endIcon?: React.ReactNode;
   startIcon?: React.ReactNode;
   name?: string;
-  arialabel?: string;
-  arialabelledby?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
   onChange?: (event: any) => void;
   type?:
     | "text"
@@ -110,12 +110,12 @@ export type PlasmicTextInput__ArgsType = {
     | "email"
     | "tel";
   value?: string;
-  arialabel?: string;
-  arialabelledby?: string;
-  arialabel?: string;
-  arialabelledby?: string;
-  arialabel?: string;
-  arialabelledby?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
 };
 type ArgPropType = keyof PlasmicTextInput__ArgsType;
 export const PlasmicTextInput__ArgProps = new Array<ArgPropType>(
@@ -123,17 +123,17 @@ export const PlasmicTextInput__ArgProps = new Array<ArgPropType>(
   "endIcon",
   "startIcon",
   "name",
-  "arialabel",
-  "arialabelledby",
+  "aria-label",
+  "aria-labelledby",
   "onChange",
   "type",
   "value",
-  "arialabel",
-  "arialabelledby",
-  "arialabel",
-  "arialabelledby",
-  "arialabel",
-  "arialabelledby"
+  "aria-label",
+  "aria-labelledby",
+  "aria-label",
+  "aria-labelledby",
+  "aria-label",
+  "aria-labelledby"
 );
 
 export type PlasmicTextInput__OverridesType = {
@@ -146,8 +146,8 @@ export type PlasmicTextInput__OverridesType = {
 export interface DefaultTextInputProps extends pp.BaseTextInputProps {
   placeholder?: string;
   name?: string;
-  arialabel?: string;
-  arialabelledby?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
   onChange?: (event: any) => void;
   type?:
     | "text"
@@ -160,12 +160,12 @@ export interface DefaultTextInputProps extends pp.BaseTextInputProps {
     | "email"
     | "tel";
   value?: string;
-  arialabel?: string;
-  arialabelledby?: string;
-  arialabel?: string;
-  arialabelledby?: string;
-  arialabel?: string;
-  arialabelledby?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
+  "aria-label"?: string;
+  "aria-labelledby"?: string;
   color?: SingleChoiceArg<"dark">;
 }
 
@@ -310,7 +310,7 @@ function PlasmicTextInput__RenderFunc(props: {
       >
         {renderPlasmicSlot({
           defaultContents: (
-            <SearchSvg2Icon
+            <Searchsvg2Icon
               className={classNames(projectcss.all, sty.svg__nerRl)}
               role={"img"}
             />
@@ -368,7 +368,7 @@ function PlasmicTextInput__RenderFunc(props: {
       >
         {renderPlasmicSlot({
           defaultContents: (
-            <CheckSvgIcon
+            <ChecksvgIcon
               className={classNames(projectcss.all, sty.svg__cXk3U)}
               role={"img"}
             />

@@ -5,11 +5,11 @@
 import React from "react";
 import { classNames } from "@plasmicapp/react-web";
 
-export type CartSvgIconProps = React.ComponentProps<"svg"> & {
+export type CartsvgIconProps = React.ComponentProps<"svg"> & {
   title?: string;
 };
 
-export function CartSvgIcon(props: CartSvgIconProps) {
+export function CartsvgIcon(props: CartsvgIconProps) {
   const { className, style, title, ...restProps } = props;
   return (
     <svg
@@ -38,5 +38,5 @@ export function CartSvgIcon(props: CartSvgIconProps) {
   );
 }
 
-export default CartSvgIcon;
+export default CartsvgIcon;
 /* prettier-ignore-end */
